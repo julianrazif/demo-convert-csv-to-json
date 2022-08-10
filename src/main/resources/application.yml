@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  batch:
+    job:
+      enabled: false
+  datasource:
+    url: jdbc:h2:mem:job
+    username: julian
+    password: julian
+    driver-class-name: org.h2.Driver
+logging:
+  level:
+    org.springframework: INFO
